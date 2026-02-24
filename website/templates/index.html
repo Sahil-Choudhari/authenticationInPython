@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block container %}
+<h1 style="text-align: center; color: #fff;
+text-shadow: 0 0 10px #00f, 0 0 20px #00f;">
+  Hello! {{ user.firstName }} {{ user.lastName }}
+</h1>
+<h1 style="text-align: center">Notes</h1>
+
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item" style="margin-bottom: 2px;">
+    {{ note.data }}
+  </li>
+
+  {% endfor %}
+</ul>
+
+<br />
+
+<form method="POST">
+  <textarea name="note" id="note" class="form-control" placeholder="Write your note here"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form>
+
+{% endblock container %}

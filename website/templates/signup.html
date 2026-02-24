@@ -1,0 +1,79 @@
+{% extends 'base.html' %} {% block title%}Home{% endblock title%} {% block
+container %}
+
+<h1 style="text-align: center; margin-bottom: 70px">Create Accout here!</h1>
+
+<form method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      name="email"
+      placeholder="Enter your email "
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">First name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      name="firstName"
+      placeholder="First name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Last name</label>
+    <input
+      type="text"
+      name="lastName"
+      class="form-control lastname"
+      id="lastname"
+      placeholder="Last name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="password1" class="form-label">Password</label>
+    <input
+      type="password"
+      name="password1"
+      class="form-control"
+      id="password"
+      placeholder="Password"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="password2" class="form-label"> Confirm Password</label>
+    <input
+      type="password"
+      name="password2"
+      class="form-control"
+      id="password"
+      placeholder="Confirm password"
+    />
+  </div>
+
+  <div class="mb-3 form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      name="checkbox"
+      id="exampleCheck1"
+    />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock container %}
